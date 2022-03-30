@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: commonui-deploy
+  name: apidoc-aggregator-deploy
   namespace: apidoc-aggregator
   labels:
-    app: commonui
+    app: apidoc-aggregator
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: commonui
+      app: apidoc-aggregator
   template:
     metadata:
       labels:
-        app: commonui
+        app: apidoc-aggregator
     spec:
       containers:
-      - name: commonui
-        image: commonui  # on server
-        # image: commonui
+      - name: apidoc-aggregator
+        image: feet312/apidoc-aggregator  # on server
+        # image: apidoc-aggregator
         ports: 
         - name: http
           containerPort: 8080
@@ -26,12 +26,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: commonui-service
+  name: apidoc-aggregator-service
   namespace: apidoc-aggregator
 spec:
   # type: NodePort
   selector:
-    app: commonui
+    app: apidoc-aggregator
   ports:
     - protocol: TCP
       port: 8080

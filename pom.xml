@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.openapi.common.ui</groupId>
-	<artifactId>commonui</artifactId>
+	<artifactId>apidoc-aggregator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>commonui</name>
+	<name>apidoc-aggregator</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
