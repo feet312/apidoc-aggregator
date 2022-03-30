@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: commonui
+  cloud:
+    kubernetes:
+      config:
+        paths: /application.yml
+      discovery:
+        enabled: true
+        all-namespaces: true
+    gateway:
+      routes:
+        - id: microserviceone
+          uri: http://localhost:8081
+          predicates:
+            - Path=/microserviceone/**
+          filters:
+            - RewritePath=/microserviceone(?<segment>/?.*), $\{segment}
+        - id: microservicetwo
+          uri: http://localhost:8082
+          predicates:
+            - Path=/microservicetwo/**
+          filters:
+            - RewritePath=/microservicetwo(?<segment>/?.*), $\{segment}
+
+server:
+  forward-headers-strategy: framework
