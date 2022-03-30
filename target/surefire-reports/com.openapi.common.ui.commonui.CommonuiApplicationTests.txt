@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.openapi.common.ui.commonui.CommonuiApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.205 s <<< FAILURE! - in com.openapi.common.ui.commonui.CommonuiApplicationTests
-contextLoads  Time elapsed: 0.017 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.217 s <<< FAILURE! - in com.openapi.common.ui.commonui.CommonuiApplicationTests
+contextLoads  Time elapsed: 0.011 s  <<< ERROR!
 java.lang.IllegalStateException: Failed to load ApplicationContext
 Caused by: org.springframework.cloud.kubernetes.commons.config.NamespaceResolutionFailedException: unresolved namespace
 
